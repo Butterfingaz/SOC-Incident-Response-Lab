@@ -23,4 +23,11 @@ sudo grep "198.51.100.42" /var/log/auth.log
 ### 📊 Threat Hunt Telemetry Evidence Log
 ![Endpoint Audit Query Evidence](wazuh_api_proof.png)
 
+<img width="883" height="249" alt="brute-force attack log" src="https://github.com/user-attachments/assets/b70cd7d9-01d8-4597-876c-73b869956b87" />
+
+<img width="881" height="177" alt="output matching those log" src="https://github.com/user-attachments/assets/742e1240-1346-4d06-9fdc-31d9dbbe0b77" />
+
+
+
+
 The triage workflow successfully isolated and returned the tracking footprint, mapping the attack metrics directly to the **MITRE ATT&CK Framework under T1110 (Brute Force)** credential access tactics.
