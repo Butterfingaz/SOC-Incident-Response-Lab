@@ -1,10 +1,6 @@
 # SOC-Incident-Response-Lab
 Linux Endpoint Audit &amp; Programmatic Log Triage Project
 
-
-# SOC-Incident-Response-Lab
-Linux Endpoint Audit & Programmatic Log Triage Project
-
 ## 1. Project Overview
 This project demonstrates defensive security operations, log analysis, and threat hunting inside a Linux sandbox environment. To simulate a real-world incident response triaging workflow, an authentication brute-force logging attack vector was simulated, and system metrics were gathered programmatically via native log analysis tracking to isolate malicious indicators of compromise (IoCs).
 
