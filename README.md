@@ -1,2 +1,30 @@
 # SOC-Incident-Response-Lab
 Linux Endpoint Audit &amp; Programmatic Log Triage Project
+
+
+# SOC-Incident-Response-Lab
+Linux Endpoint Audit & Programmatic Log Triage Project
+
+## 1. Project Overview
+This project demonstrates defensive security operations, log analysis, and threat hunting inside a Linux sandbox environment. To simulate a real-world incident response triaging workflow, an authentication brute-force logging attack vector was simulated, and system metrics were gathered programmatically via native log analysis tracking to isolate malicious indicators of compromise (IoCs).
+
+## 2. Infrastructure Architecture
+* **Testing Platform:** Ubuntu Linux (VirtualBox Sandbox Environment)
+* **Log Collection Engine:** Native Linux Syslog Management Architecture
+* **Analysis Focus:** Core Security Telemetry Parsing
+
+## 3. Threat Hunting Walkthrough
+To simulate an authentication brute-force attempt, a high-severity log injection entry was executed:
+```bash
+sudo logger -t sshd "Failed password for root from 198.51.100.42 port 4321 ssh2"
+```
+
+System log registries were parsed natively via terminal pipelines to map out security events tracking the rogue endpoint footprint structure:
+```bash
+sudo grep "198.51.100.42" /var/log/auth.log
+```
+
+### 📊 Threat Hunt Telemetry Evidence Log
+![Endpoint Audit Query Evidence](wazuh_api_proof.png)
+
+The triage workflow successfully isolated and returned the tracking footprint, mapping the attack metrics directly to the **MITRE ATT&CK Framework under T1110 (Brute Force)** credential access tactics.
